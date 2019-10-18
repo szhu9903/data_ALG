@@ -29,7 +29,12 @@ public class Myarray {
 	public void show() {
 		System.out.println(Arrays.toString(elements));
 	}
-	
+
+	//获取某个位置数字
+	public int getindex(int index) {
+		return elements[index - 1];
+	}
+
 	//删除数组元素
 	public void delete(int index) {
 		//判断要删除的元素下标是否在数组范围内

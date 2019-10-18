@@ -10,18 +10,22 @@ public class TestBinary {
 		for (int i = 1; i < 101; i++) {
 			ma.add(i);
 		}
-		ma.show();
 		//目标数据
-		int traget = 35;
+		int traget = 72;
 		//初始化位置信息
-		int index = -1;
+		int start = 0;
+		int end = 100;
 		while (true) {
-			int center = (ma.size()-1)/2;
+			int center = (end - start)/2+start;
 			if (traget == center) {
-				index = center-1;
+				System.out.println(ma.getindex(center));
 				break;
+			}else if (traget > center){
+				start = center;
+				continue;
 			}else {
-				
+				end = center;
+				continue;
 			}
 		}
 	}
