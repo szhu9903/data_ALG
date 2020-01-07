@@ -11,7 +11,7 @@ public class TestBinary {
 			ma.add(i);
 		}
 		//目标数据
-		int traget = 72;
+		int traget = 13;
 		//初始化位置信息
 		int start = 0;
 		int end = 100;
