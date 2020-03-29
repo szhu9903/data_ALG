@@ -14,7 +14,8 @@ public class TestNode {
         no1.append(no2).append(no3).append(no4);
 
         System.out.println(no1.getEnd());
-        System.out.println(no2.getEnd());
+        System.out.println(no1.getEnd());
         System.out.println(no2.next());
     }
 }
+//节点的next存放下一个节点的data
