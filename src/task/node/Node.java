@@ -26,6 +26,31 @@ public class Node {
         return currentNode;
     }
 
+    public void show() {
+        Node currentNode = this;
+        while (true){
+
+            System.out.print(currentNode.data);
+            if (currentNode.next == null){
+                break;
+            }
+            currentNode = currentNode.next;
+        }
+        System.out.println();
+
+    }
+
+    public void delete() {
+        Node currentNode = this.next.next;
+        this.next = currentNode;
+    }
+
+    public void insert(Node node){
+        Node currentNode = this.next;
+        node.next = currentNode;
+        this.next = node;
+    }
+
     //获取尾节点
     public int getEnd() {
         Node currentNode = this;
@@ -39,6 +64,7 @@ public class Node {
         return currentNode.data;
     }
 
+
     //获取下一个节点
     public int next() {
         return this.next.data;
@@ -48,6 +74,8 @@ public class Node {
     public int getData() {
         return this.data;
     }
+
+
 
 
 

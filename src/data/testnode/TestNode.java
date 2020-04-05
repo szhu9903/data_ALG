@@ -13,6 +13,12 @@ public class TestNode {
 
         no1.append(no2).append(no3).append(no4);
 
+        no1.show();
+        no2.delete();
+        no1.show();
+        no2.insert(new Node(5));
+        no1.show();
+
         System.out.println(no1.getEnd());
         System.out.println(no1.getEnd());
         System.out.println(no2.next());
