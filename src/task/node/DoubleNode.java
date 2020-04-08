@@ -26,6 +26,17 @@ public class DoubleNode {
         nextNext.per = node;
     }
 
+    //删除当前节点
+    public void delete() {
+        //上一个节点
+        DoubleNode perNode = this.per;
+        perNode.next = this.next;
+        //下一个节点
+        DoubleNode nextNode = this.next;
+        nextNode.per = perNode;
+    }
+
+
     //获取上个节点
     public DoubleNode getPer(){
         return this.per;

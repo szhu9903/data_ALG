@@ -33,6 +33,7 @@ public class TestNode {
 
         n1.after(n2);
         n2.after(n3);
+
         System.out.println(n1.next());
         System.out.println(n2.next());
         System.out.println(n3.next());
