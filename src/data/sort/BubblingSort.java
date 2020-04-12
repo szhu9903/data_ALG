@@ -1,10 +1,14 @@
 package data.sort;
 
+import java.util.Arrays;
+
 public class BubblingSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[] {5,1,2,4,8,4,2,6,8,2,8,0,65,4,3,2,5,6};
-        bubblingSort(arr);
+        int[] arr = new int[] {5,1,12,15,8,4,13,6,19,14,18,0,65,16,3,5,5,6};
+//        bubblingSort(arr);
+        quickSort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void bubblingSort(int[] arr){
@@ -18,11 +22,30 @@ public class BubblingSort {
                 }
             }
         }
-        //打印
-        for (int elment:arr){
-            System.out.print(elment+",");
-        }
-
     }
+
+    //快速排序
+    public static void quickSort(int[] arr,int sta,int end) {
+        if (sta < end){
+            int stard = arr[sta];
+            int low = sta;
+            int high = end;
+            while (low<high){
+                while (low<high&&arr[high] >= stard){
+                    high--;
+                }
+                arr[low] = arr[high];
+                while (low<high&&arr[low] <= stard){
+                    low++;
+                }
+
+                arr[high] = arr[low];
+            }
+            arr[low] = stard;
+            quickSort(arr,sta,low);
+            quickSort(arr,low+1,end);
+        }
+    }
+
 
 }
