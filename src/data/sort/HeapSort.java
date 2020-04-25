@@ -5,14 +5,14 @@ import java.util.Arrays;
 public class HeapSort {
 
     public static void main(String[] args) {
-        int[] arr = new int[] {1,3,2,9,5,4,6,0,10,16,7,17};
+        int[] arr = new int[] {1,3,2,9,5,4,6,0,16,17,8,7};
         HeapSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }
 
     public static void HeapSort(int[] arr){
-        int start = (arr.length-1)/2;
+        int start = arr.length/2-1;
         for (int i=start;i>=0;i--) {
             MaxHeap(arr,arr.length,i);
         }
