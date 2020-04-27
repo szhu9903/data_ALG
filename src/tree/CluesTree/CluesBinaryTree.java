@@ -18,6 +18,11 @@ public class CluesBinaryTree {
         thredNodes(root);
     }
 
+    public void midShow(){
+        root.midShow();
+    }
+
+
     public void thredNodes(ClueTreeNode node){
         if (node == null){
             return;
@@ -39,6 +44,22 @@ public class CluesBinaryTree {
 
         //右子树
         thredNodes(node.RightTreeNode);
-
     }
+
+    //遍历线索二叉树
+    public void thredIterate(){
+        ClueTreeNode node = root;
+        while (node!=null){
+            while (node.leftTreeType==0){
+                node = node.LeftTreeNode;
+            }
+            System.out.println(node.value);
+            while (node.RightTreeType==1){
+                node = node.RightTreeNode;
+                System.out.println(node.value);
+            }
+            node = node.RightTreeNode;
+        }
+    }
+
 }

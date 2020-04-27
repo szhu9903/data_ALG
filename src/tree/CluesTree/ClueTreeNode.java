@@ -5,8 +5,8 @@ public class ClueTreeNode {
     ClueTreeNode LeftTreeNode;
     ClueTreeNode RightTreeNode;
     //节点类型标记 子节点或驱节点
-    int leftTreeType=0;
-    int RightTreeType=0;
+    int leftTreeType;
+    int RightTreeType;
 
     public ClueTreeNode(int value){
         this.value = value;
@@ -20,4 +20,14 @@ public class ClueTreeNode {
         this.RightTreeNode = rightTreeNode;
     }
 
+    //中序遍历
+    public void midShow(){
+        if (LeftTreeNode!=null){
+            LeftTreeNode.midShow();
+        }
+        System.out.println(value);
+        if (RightTreeNode!=null){
+            RightTreeNode.midShow();
+        }
+    }
 }

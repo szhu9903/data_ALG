@@ -19,14 +19,19 @@ public class TestClueBinaryTree {
         righttree.setLeftTreeNode(new ClueTreeNode(6));
         righttree.setRightTreeNode(new ClueTreeNode(7));
 
+
+        bintree.midShow();
         bintree.thredNodes();
 
-        ClueTreeNode fiveL = fiveNode.LeftTreeNode;
-        int five = fiveNode.value;
-        ClueTreeNode fiveR = fiveNode.RightTreeNode;
-        System.out.println(fiveL.value);
-        System.out.println(five);
-        System.out.println(fiveR.value);
+        System.out.println("_______________");
+        //
+//        ClueTreeNode fiveL = fiveNode.LeftTreeNode;
+//        int five = fiveNode.value;
+//        ClueTreeNode fiveR = fiveNode.RightTreeNode;
+//        System.out.println(fiveL.value);
+//        System.out.println(five);
+//        System.out.println(fiveR.value);
+        bintree.thredIterate();
 
 
 
